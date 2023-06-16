@@ -1,0 +1,40 @@
+Logic behind user validation
+function validate() {
+    let configuration = [{
+        "uname": "Shubham",
+        "pass": 1234
+    },
+    {
+        "uname": "Prathamesh",
+        "pass": 1234
+    },
+    {
+        "uname": "Rahul",
+        "pass": 234
+    }
+    ]
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let count=0;
+
+    for (index in configuration) {
+
+        if (username == configuration[index]["uname"] && password == configuration[index]["pass"]) {
+            count = count + 1;
+
+
+        }
+
+    }
+    if (count > 0) {
+          console.log("Valid user")
+    } else {
+        console.log("Invalid user")
+    }
+
+
+
+
+
+}
+
